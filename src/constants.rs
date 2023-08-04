@@ -83,6 +83,21 @@ pub const CRMRC_FILE: &str = r#"
 registry = "https://github.com/rust-lang/crates.io-index"
 dl = "https://crates.io/api/v1/crates"
 
+# 智能镜像
+[source.mirrorz]
+registry = "https://m.mirrorz.org/git/crates.io-index"
+dl = "https://m.mirrorz.org/crates.io/crates/{crate}/{crate}-{version}.crate"
+
+# 智能镜像 - sparse
+[source.mirrorz-sparse]
+registry = "sparse+https://m.mirrorz.org/crates.io-index/"
+dl = "https://m.mirrorz.org/crates.io/crates/{crate}/{crate}-{version}.crate"
+
+# 智能镜像
+[source.mirrorz]
+registry = "https://m.mirrorz.org/git/crates.io-index.git"
+dl = "https://m.mirrorz.org/crates.io/crates/{crate}/{crate}-{version}.crate"
+
 # 上海交通大学
 [source.sjtu]
 registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
